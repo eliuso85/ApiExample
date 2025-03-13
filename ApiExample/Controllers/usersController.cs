@@ -6,18 +6,23 @@ namespace ApiExample.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
-public class usersController : ControllerBase
+public class UsersController(IUsersService itemService) : ControllerBase
 {
-    private readonly IUsersService _itemService;
 
-    public usersController(IUsersService itemService)
-    {
-        _itemService = itemService;
-    }
-
+    #region GET
     [HttpGet]
     [Route("GetAll")]
     public async Task<ResponseApi> GetAllUsers()
-        => await _itemService.GetAllUsersAsync();
+          => await itemService.GetAllUsersAsync();
+    #endregion
 
+    #region Post
+    #endregion
+
+    #region Put
+    #endregion
+
+    #region Delete
+    #endregion
+    
 }
