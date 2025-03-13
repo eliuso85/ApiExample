@@ -82,6 +82,6 @@ GO;
 
 EXEC [dbo].sp_GetUsers 
 
-EXEC [dbo].sp_GetUserById @Id = 1
+EXEC [dbo].sp_GetUserById @Id = 2
 
-EXEC [dbo].sp_DeleteUser  @Id = 1,@Active=1
+EXEC [dbo].sp_DeleteUser  @Id =  2 ,@Active=0
